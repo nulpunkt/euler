@@ -1,7 +1,7 @@
 import itertools
 
 class Pandigital:
-	def isPandigital(self, test, n):
+	def is_pandigital(self, test, n):
 		first = self.first(test, n)
 		remaining = self.remaining(test, n)
 		i = 2
@@ -36,13 +36,6 @@ class Pandigital:
 		else:
 			return len(str(i))
 	
-
-p = Pandigital()
-print p.isPandigital(192384576, 3)
-print p.isPandigital(192384576, 2)
-print p.isPandigital(918273645, 1)
-		
-
 #for i in itertools.permutations('987654321', 9):
 #	print i
 #	break
