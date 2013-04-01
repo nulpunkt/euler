@@ -2,10 +2,11 @@ from wi import WordIterator
 from tn import TriangleNumber
 
 tn = TriangleNumber()
-print tn.number('AAAA')
-print tn.isTN(tn.number('SKY'))
+print 
 
 it = WordIterator('words.txt')
+ctn = 0
 for word in it:
-	print word
-	break
+	if tn.isTN(tn.number(word)):
+		ctn += 1
+print ctn
