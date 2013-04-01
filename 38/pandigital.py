@@ -1,6 +1,3 @@
-import itertools
-import sys
-
 class Pandigital:
 	def is_pandigital(self, test, n):
 		first = self.first(test, n)
@@ -36,16 +33,3 @@ class Pandigital:
 			return 0
 		else:
 			return len(str(i))
-
-	@staticmethod
-	def main():
-		p  = Pandigital()
-		for perm in itertools.permutations('987654321', 9):
-			for i in range(1, 5):
-				if(p.is_pandigital(''.join(perm), i)):
-					print perm, ' ', i	
-					return 0
-		return 0
-	
-if __name__ == '__main__':
-	sys.exit(Pandigital.main())
